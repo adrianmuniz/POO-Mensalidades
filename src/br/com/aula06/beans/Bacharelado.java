@@ -36,4 +36,12 @@ public class Bacharelado extends Formacao{
 		return mensalidade;
 	}
 	
+	@Override
+	public void definirDuracao() {
+		if (super.getDescricao().equalsIgnoreCase("Engenharia")) {
+			super.setDuracao(60);
+		} else {
+			super.setDuracao(48);
+		}
+	}
 }

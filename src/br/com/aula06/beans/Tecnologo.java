@@ -26,5 +26,10 @@ public class Tecnologo extends Formacao {
 		return mensalidade;
 	}
 	
+	@Override
+	public void definirDuracao() {
+			System.out.println("O aluno está no Tecnologo");
+			setDuracao(24);
+		}
 	
 }

@@ -44,7 +44,7 @@ public abstract class Formacao {
 	}
 	
 	public float retornarMedia (float ps1, float ps2) {
-		return ps1 + ps2 / 2;
+		return (ps1 + ps2) / 2;
 	}
 	
 	public float retornarMedia (float ps1, float ps2, float nac1, float nac2) {

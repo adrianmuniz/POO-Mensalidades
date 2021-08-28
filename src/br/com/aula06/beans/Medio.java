@@ -27,9 +27,7 @@ public class Medio extends Formacao {
 	
 	@Override
 	public void definirDuracao() {
-		if (getDuracao() == 36) {
 			System.out.println("O aluno está no Ensino Médio");
 			setDuracao(36);
-		}
 	}
 }
