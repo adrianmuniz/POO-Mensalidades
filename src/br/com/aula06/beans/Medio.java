@@ -6,8 +6,8 @@ public class Medio extends Formacao {
 	
 	public Medio() {}
 
-	public Medio(String descricao, int duracao, short periodo, String tipo) {
-		super(descricao, duracao, periodo);
+	public Medio(String descricao, short periodo, String tipo) {
+		super(descricao, periodo);
 		this.tipo = tipo;
 	}
 
@@ -19,6 +19,17 @@ public class Medio extends Formacao {
 		this.tipo = tipo;
 	};
 	
-	
-	
+	@Override
+	public double calcularMensalidade(double fator) {
+		float mensalidade = (float) (super.getDuracao() * fator * 100f);
+		return mensalidade;
 	}
+	
+	@Override
+	public void definirDuracao() {
+		if (getDuracao() == 36) {
+			System.out.println("O aluno está no Ensino Médio");
+			setDuracao(36);
+		}
+	}
+}

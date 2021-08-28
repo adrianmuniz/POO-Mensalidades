@@ -1,6 +1,6 @@
 package br.com.aula06.beans;
 
-public class Formacao {
+public abstract class Formacao {
 
 	private String descricao;
 	private int duracao;
@@ -9,10 +9,9 @@ public class Formacao {
 	
 	public Formacao() {};
 	
-	public Formacao(String descricao, int duracao, short periodo) {
+	public Formacao(String descricao, short periodo) {
 		super();
 		this.descricao = descricao;
-		this.duracao = duracao;
 		this.periodo = periodo;
 	}
 
@@ -55,4 +54,14 @@ public class Formacao {
 	public float retornarMedia (float ps1, float ps2, float nac1, float nac2, float am1, float am2) {
 		return (ps1 + ps2 + nac1 + nac2 + am1 + am2) / 6;
 	}
+	
+	public double calcularMensalidade(double fator) {
+		mensalidade = (float) (duracao * fator);
+		return mensalidade;
+	}
+	
+	public void definirDuracao() {
+		
+	}
+	
 }
